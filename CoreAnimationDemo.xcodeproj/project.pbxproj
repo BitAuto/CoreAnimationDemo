@@ -16,6 +16,9 @@
 		C8DFDBC513D67820000ACFBB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DFDBC313D67820000ACFBB /* MainWindow.xib */; };
 		C8DFDBC813D67820000ACFBB /* CoreAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DFDBC713D67820000ACFBB /* CoreAnimationDemoViewController.m */; };
 		C8DFDBCB13D67820000ACFBB /* CoreAnimationDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DFDBC913D67820000ACFBB /* CoreAnimationDemoViewController.xib */; };
+		C8DFDBD213D67850000ACFBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DFDBD113D67850000ACFBB /* QuartzCore.framework */; };
+		C8DFDBD513D67884000ACFBB /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DFDBD313D67884000ACFBB /* elephant.png */; };
+		C8DFDBD613D67884000ACFBB /* hippo.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DFDBD413D67884000ACFBB /* hippo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +26,19 @@
 		C8DFDBB113D67820000ACFBB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C8DFDBB313D67820000ACFBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C8DFDBB513D67820000ACFBB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C8DFDBB913D67820000ACFBB /* CoreAnimationDemo-Info.plist */ = {isa = PBXFileReference; path = "CoreAnimationDemo-Info.plist"; sourceTree = "<group>"; };
+		C8DFDBB913D67820000ACFBB /* CoreAnimationDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreAnimationDemo-Info.plist"; sourceTree = "<group>"; };
 		C8DFDBBB13D67820000ACFBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C8DFDBBD13D67820000ACFBB /* CoreAnimationDemo-Prefix.pch */ = {isa = PBXFileReference; path = "CoreAnimationDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C8DFDBBD13D67820000ACFBB /* CoreAnimationDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreAnimationDemo-Prefix.pch"; sourceTree = "<group>"; };
 		C8DFDBBE13D67820000ACFBB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C8DFDBC013D67820000ACFBB /* CoreAnimationDemoAppDelegate.h */ = {isa = PBXFileReference; path = CoreAnimationDemoAppDelegate.h; sourceTree = "<group>"; };
+		C8DFDBC013D67820000ACFBB /* CoreAnimationDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimationDemoAppDelegate.h; sourceTree = "<group>"; };
 		C8DFDBC113D67820000ACFBB /* CoreAnimationDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationDemoAppDelegate.m; sourceTree = "<group>"; };
 		C8DFDBC413D67820000ACFBB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		C8DFDBC613D67820000ACFBB /* CoreAnimationDemoViewController.h */ = {isa = PBXFileReference; path = CoreAnimationDemoViewController.h; sourceTree = "<group>"; };
+		C8DFDBC613D67820000ACFBB /* CoreAnimationDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimationDemoViewController.h; sourceTree = "<group>"; };
 		C8DFDBC713D67820000ACFBB /* CoreAnimationDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationDemoViewController.m; sourceTree = "<group>"; };
 		C8DFDBCA13D67820000ACFBB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CoreAnimationDemoViewController.xib; sourceTree = "<group>"; };
+		C8DFDBD113D67850000ACFBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C8DFDBD313D67884000ACFBB /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
+		C8DFDBD413D67884000ACFBB /* hippo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hippo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DFDBD213D67850000ACFBB /* QuartzCore.framework in Frameworks */,
 				C8DFDBB213D67820000ACFBB /* UIKit.framework in Frameworks */,
 				C8DFDBB413D67820000ACFBB /* Foundation.framework in Frameworks */,
 				C8DFDBB613D67820000ACFBB /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +59,7 @@
 		C8DFDBA213D67820000ACFBB = {
 			isa = PBXGroup;
 			children = (
+				C8DFDBD113D67850000ACFBB /* QuartzCore.framework */,
 				C8DFDBB713D67820000ACFBB /* CoreAnimationDemo */,
 				C8DFDBB013D67820000ACFBB /* Frameworks */,
 				C8DFDBAE13D67820000ACFBB /* Products */,
@@ -85,6 +93,8 @@
 				C8DFDBC613D67820000ACFBB /* CoreAnimationDemoViewController.h */,
 				C8DFDBC713D67820000ACFBB /* CoreAnimationDemoViewController.m */,
 				C8DFDBC913D67820000ACFBB /* CoreAnimationDemoViewController.xib */,
+				C8DFDBD313D67884000ACFBB /* elephant.png */,
+				C8DFDBD413D67884000ACFBB /* hippo.png */,
 				C8DFDBB813D67820000ACFBB /* Supporting Files */,
 			);
 			path = CoreAnimationDemo;
@@ -151,6 +161,8 @@
 				C8DFDBBC13D67820000ACFBB /* InfoPlist.strings in Resources */,
 				C8DFDBC513D67820000ACFBB /* MainWindow.xib in Resources */,
 				C8DFDBCB13D67820000ACFBB /* CoreAnimationDemoViewController.xib in Resources */,
+				C8DFDBD513D67884000ACFBB /* elephant.png in Resources */,
+				C8DFDBD613D67884000ACFBB /* hippo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
