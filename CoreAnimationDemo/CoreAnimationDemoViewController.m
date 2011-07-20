@@ -167,6 +167,14 @@ const static float kAnimationTime=0.75;
             break;
             
         case 6:
+            lx.text = @"animationKeyPath";
+            xValue.text = @"position";
+            time.text = @"0.5";
+            radianValue.text = @"3";
+            lr.text = @"angle";
+            
+            lz.text = @"N/A";
+            ly.text = @"N/A";
             break;
         case 7:
             lx.text = @"type";
@@ -184,6 +192,21 @@ const static float kAnimationTime=0.75;
     }
 }
 
+- (CAKeyframeAnimation *) jumpAnimation
+{
+    CAKeyframeAnimation * _jump = [CAKeyframeAnimation animationWithKeyPath: @"position"];
+    _jump.duration = [time.text floatValue];
+    _jump.repeatCount = 1;
+    CGPoint _pos = elephant.layer.position;
+    _jump.beginTime = CACurrentMediaTime();
+    NSMutableArray *_values = [NSMutableArray arrayWithCapacity:3];
+    [_values addObject:  [NSValue valueWithCGPoint: CGPointMake(_pos.x,_pos.y)]];
+     [_values addObject:  [NSValue valueWithCGPoint: CGPointMake(_pos.x+50,_pos.y+30)]];
+    [_values addObject:  [NSValue valueWithCGPoint: CGPointMake(_pos.x+100,_pos.y-30)]];
+    [_values addObject:  [NSValue valueWithCGPoint: CGPointMake(_pos.x+150,_pos.y+30)]];
+    _jump.values = _values;
+    return  _jump;
+}
 - (CAKeyframeAnimation *) shakeAnimation
 {
     CAKeyframeAnimation * _shake = [CAKeyframeAnimation animationWithKeyPath: @"transform.rotation.z"];
@@ -191,7 +214,7 @@ const static float kAnimationTime=0.75;
     _shake.repeatCount = 1000;
     srand([[NSDate date] timeIntervalSince1970]);
     float _rand = (float)random();
-    _shake.beginTime = CACurrentMediaTime()+ _rand *0.000000001;
+    _shake.beginTime = CACurrentMediaTime();
     NSMutableArray *_values = [NSMutableArray arrayWithCapacity:3];
     [_values addObject: [NSNumber numberWithFloat:  degreeToRadian(-[radianValue.text floatValue]) ]];
     [_values addObject: [NSNumber numberWithFloat:  degreeToRadian([radianValue.text floatValue]) ]];
@@ -292,6 +315,9 @@ const static float kAnimationTime=0.75;
         }
         case 6:
         {
+            CAAnimationGroup * _group = [CAAnimationGroup animation];
+            _group.animations = [NSArray arrayWithObjects: [self jumpAnimation], [self shakeAnimation],nil];
+            [elephant.layer addAnimation: [self jumpAnimation] forKey:@"group"];
             break;
         }
             case 7:
