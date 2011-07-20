@@ -26,6 +26,8 @@
 	<true/>
 	<key>UIPrerenderedIcon</key>
 	<true/>
+	<key>CFBundleIconFile</key>
+	<string>hippoIcon.png</string>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
