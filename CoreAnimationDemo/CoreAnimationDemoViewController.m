@@ -114,26 +114,39 @@ const static float kAnimationTime=0.75;
     switch (segmented.selectedSegmentIndex)
     {
         case 0:
+            xValue.text = @"1.3";
+            yValue.text = @"1.3";
+            zValue.text = @"1.0";
             lx.text = @"x -axis scale";
             ly.text = @"y -axis scale";
             lz.text = @"z -axis scale";
             lr.text = @"N/A";
             break;
         case 1:
+            xValue.text = @"0";
+            yValue.text = @"0";
+            zValue.text = @"1.0";
+            radianValue.text = @"35";
             lx.text = @"vector x";
             ly.text = @"vector y";
             lz.text = @"vector z";
             lr.text = @"angle";
             break;
         case 2:
+            xValue.text = @"30";
+            yValue.text = @"40";
             lx.text = @"x -axis offset";
             ly.text = @"y -axis offset";
-            lz.text = @"z N/A";
+            lz.text = @"N/A";
             lr.text = @"N/A";
             break;
         case 3:
+            xValue.text = @"0";
+            yValue.text = @"1";
             lx.text = @"begin shadowOpacity";
             ly.text = @"end shadowOpacity";
+            lz.text = @"N/A";
+            lr.text = @"N/A";
             break;
         case 4:
             lx.text = @"begin - width";
@@ -146,6 +159,11 @@ const static float kAnimationTime=0.75;
             xValue.text = @"transform.rotation.z";
             time.text = @"0.5";
             radianValue.text = @"3";
+            lr.text = @"angle";
+            
+            lz.text = @"N/A";
+            ly.text = @"N/A";
+            
             break;
             
         case 6:
@@ -168,7 +186,7 @@ const static float kAnimationTime=0.75;
 
 - (CAKeyframeAnimation *) shakeAnimation
 {
-    CAKeyframeAnimation * _shake = [CAKeyframeAnimation animationWithKeyPath: xValue.text];
+    CAKeyframeAnimation * _shake = [CAKeyframeAnimation animationWithKeyPath: @"transform.rotation.z"];
     _shake.duration = [time.text floatValue];
     _shake.repeatCount = 1000;
     srand([[NSDate date] timeIntervalSince1970]);
